@@ -254,7 +254,7 @@ function hr_operations_field_default_field_instances() {
         'label' => 'above',
         'module' => 'og_ui',
         'settings' => array(
-          'field_name' => FALSE,
+          'field_name' => 'og_user_node',
         ),
         'type' => 'og_group_subscribe',
         'weight' => 0,
