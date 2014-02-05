@@ -46,6 +46,7 @@ features[og_features_permission][] = node:hr_operation:assign editor role
 features[og_features_permission][] = node:hr_operation:assign manager role
 features[og_features_permission][] = node:hr_operation:manage members
 features[og_features_permission][] = node:hr_operation:update group
+features[og_features_role][] = node:hr_operation:bundle member
 features[og_features_role][] = node:hr_operation:editor
 features[og_features_role][] = node:hr_operation:manager
 features[panelizer_defaults][] = node:hr_operation:default:default
