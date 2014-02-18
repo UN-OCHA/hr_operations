@@ -58,6 +58,9 @@ function hr_operations_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'search_result' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(),
@@ -115,6 +118,20 @@ function hr_operations_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'og_features_settings_node_hr_operation';
+  $strongarm->value = array(
+    'hr_contacts' => '2',
+    'hr_documents' => '2',
+    'hr_emergencies' => '3',
+    'hr_fundings' => '3',
+    'hr_offices' => '2',
+    'hr_pages' => '2',
+  );
+  $export['og_features_settings_node_hr_operation'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_defaults_node_hr_operation';
   $strongarm->value = array(
     'status' => 1,
@@ -129,27 +146,12 @@ function hr_operations_strongarm() {
         'default' => 1,
         'choice' => 0,
       ),
-      'full' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
       'teaser' => array(
         'status' => 0,
         'default' => 0,
         'choice' => 0,
       ),
-      'rss' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'diff_standard' => array(
-        'status' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'token' => array(
+      'search_result' => array(
         'status' => 0,
         'default' => 0,
         'choice' => 0,
@@ -162,21 +164,21 @@ function hr_operations_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_node:hr_operation_allowed_layouts';
-  $strongarm->value = 'O:22:"panels_allowed_layouts":4:{s:9:"allow_new";b:1;s:11:"module_name";s:27:"panelizer_node:hr_operation";s:23:"allowed_layout_settings";a:9:{s:8:"flexible";b:1;s:6:"onecol";b:1;s:17:"threecol_33_34_33";b:1;s:14:"twocol_stacked";b:1;s:17:"threecol_25_50_25";b:1;s:25:"threecol_25_50_25_stacked";b:1;s:25:"threecol_33_34_33_stacked";b:1;s:6:"twocol";b:1;s:13:"twocol_bricks";b:1;}s:10:"form_state";N;}';
+  $strongarm->value = 'O:22:"panels_allowed_layouts":4:{s:9:"allow_new";b:1;s:11:"module_name";s:27:"panelizer_node:hr_operation";s:23:"allowed_layout_settings";a:9:{s:8:"flexible";b:0;s:6:"onecol";b:0;s:17:"threecol_33_34_33";b:0;s:14:"twocol_stacked";b:1;s:17:"threecol_25_50_25";b:0;s:25:"threecol_25_50_25_stacked";b:0;s:25:"threecol_33_34_33_stacked";b:0;s:6:"twocol";b:0;s:13:"twocol_bricks";b:0;}s:10:"form_state";N;}';
   $export['panelizer_node:hr_operation_allowed_layouts'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_node:hr_operation_allowed_layouts_default';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['panelizer_node:hr_operation_allowed_layouts_default'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_node:hr_operation_allowed_types_default';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['panelizer_node:hr_operation_allowed_types_default'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -184,15 +186,19 @@ function hr_operations_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_node:hr_operation_default';
   $strongarm->value = array(
-    'block' => 'block',
-    'entity_form_field' => 'entity_form_field',
-    'custom' => 'custom',
-    'entity_field_extra' => 'entity_field_extra',
-    'entity_field' => 'entity_field',
-    'token' => 'token',
-    'entity_view' => 'entity_view',
-    'menu_tree' => 'menu_tree',
-    'other' => 'other',
+    'views_panes' => 'views_panes',
+    'block' => 0,
+    'entity_form_field' => 0,
+    'custom' => 0,
+    'entity_field_extra' => 0,
+    'entity_field' => 0,
+    'token' => 0,
+    'entity_view' => 0,
+    'fieldable_panels_pane' => 0,
+    'menu_tree' => 0,
+    'panels_mini' => 0,
+    'views' => 0,
+    'other' => 0,
   );
   $export['panelizer_node:hr_operation_default'] = $strongarm;
 
