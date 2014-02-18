@@ -69,6 +69,13 @@ function hr_operations_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:hr_operation:subscribe without approval'
+  $permissions['node:hr_operation:subscribe without approval'] = array(
+    'roles' => array(
+      'non-member' => 'non-member',
+    ),
+  );
+
   // Exported og permission: 'node:hr_operation:update group'
   $permissions['node:hr_operation:update group'] = array(
     'roles' => array(
