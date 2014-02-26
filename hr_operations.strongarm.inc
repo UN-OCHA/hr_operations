@@ -63,7 +63,20 @@ function hr_operations_strongarm() {
       ),
     ),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'og_menu' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '11',
+        ),
+        'redirect' => array(
+          'weight' => '12',
+        ),
+        'language' => array(
+          'weight' => '9',
+        ),
+      ),
       'display' => array(),
     ),
   );
