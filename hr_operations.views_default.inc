@@ -22,7 +22,6 @@ function hr_operations_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Operations';
   $handler->display->display_options['css_class'] = 'views-catgroup';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
@@ -132,7 +131,6 @@ function hr_operations_views_default_views() {
   $handler->display->display_options['menu']['context_only_inline'] = 0;
   $translatables['hr_operations'] = array(
     t('Master'),
-    t('Operations'),
     t('more'),
     t('Apply'),
     t('Reset'),
