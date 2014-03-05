@@ -102,6 +102,11 @@ function hr_operations_feeds_importer_default() {
             'target' => 'field_launch_date:start',
             'unique' => FALSE,
           ),
+          12 => array(
+            'source' => 'Visibility',
+            'target' => 'group_access',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '2',
         'input_format' => 'plain_text',

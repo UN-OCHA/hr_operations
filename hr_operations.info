@@ -48,6 +48,7 @@ features[field_instance][] = node-hr_operation-field_operation_region
 features[field_instance][] = node-hr_operation-field_operation_type
 features[field_instance][] = node-hr_operation-field_social_media
 features[field_instance][] = node-hr_operation-field_website
+features[field_instance][] = node-hr_operation-group_access
 features[field_instance][] = node-hr_operation-group_group
 features[field_instance][] = node-hr_operation-title_field
 features[node][] = hr_operation
