@@ -123,6 +123,7 @@ function hr_operations_field_default_field_bases() {
         'year' => 'year',
       ),
       'profile2_private' => FALSE,
+      'repeat' => 0,
       'timezone_db' => '',
       'todate' => '',
       'tz_handling' => 'none',
