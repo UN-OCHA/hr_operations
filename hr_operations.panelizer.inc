@@ -73,7 +73,7 @@ function hr_operations_panelizer_defaults() {
     $pane->uuid = 'da5a9753-5710-4a0e-929f-bab1f19485e6';
     $display->content['new-da5a9753-5710-4a0e-929f-bab1f19485e6'] = $pane;
     $display->panels['top'][0] = 'new-da5a9753-5710-4a0e-929f-bab1f19485e6';
-  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $panelizer->display = $display;
   $export['node:hr_operation:default:default'] = $panelizer;
