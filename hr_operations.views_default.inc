@@ -123,8 +123,8 @@ function hr_operations_views_default_views() {
   /* Display: Text */
   $handler = $view->new_display('panel_pane', 'Text', 'text');
 
-  /* Display: OpenLayers Data Overlay */
-  $handler = $view->new_display('openlayers', 'OpenLayers Data Overlay', 'map_data');
+  /* Display: GeoJSON */
+  $handler = $view->new_display('page', 'GeoJSON', 'geojson');
   $handler->display->display_options['defaults']['cache'] = FALSE;
   $handler->display->display_options['cache']['type'] = 'time';
   $handler->display->display_options['cache']['results_lifespan'] = '21600';
@@ -132,24 +132,20 @@ function hr_operations_views_default_views() {
   $handler->display->display_options['cache']['output_lifespan'] = '21600';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'openlayers_data';
-  $handler->display->display_options['style_options']['data_source'] = array(
-    'value' => 'wkt',
-    'other_lat' => 'field_geo_data',
-    'other_lon' => 'field_geo_data',
-    'wkt' => 'field_geo_data',
-    'other_top' => 'field_geo_data',
-    'other_right' => 'field_geo_data',
-    'other_bottom' => 'field_geo_data',
-    'other_left' => 'field_geo_data',
-    'name_field' => 'title_field',
-    'description_field' => 'nothing',
-    'view_mode' => 'full',
-    'style_field' => '',
-  );
+  $handler->display->display_options['style_plugin'] = 'views_geojson';
+  $handler->display->display_options['style_options']['data_source']['value'] = 'wkt';
+  $handler->display->display_options['style_options']['data_source']['latitude'] = 'field_website_1';
+  $handler->display->display_options['style_options']['data_source']['longitude'] = 'field_website_1';
+  $handler->display->display_options['style_options']['data_source']['bbox_top'] = 'field_website_1';
+  $handler->display->display_options['style_options']['data_source']['bbox_right'] = 'field_website_1';
+  $handler->display->display_options['style_options']['data_source']['bbox_bottom'] = 'field_website_1';
+  $handler->display->display_options['style_options']['data_source']['bbox_left'] = 'field_website_1';
+  $handler->display->display_options['style_options']['data_source']['name_field'] = 'title_field';
+  $handler->display->display_options['style_options']['data_source']['description_field'] = 'nothing';
+  $handler->display->display_options['style_options']['jsonp_prefix'] = '';
+  $handler->display->display_options['style_options']['using_views_api_mode'] = 0;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Entity Reference: Referenced Entity */
@@ -157,16 +153,28 @@ function hr_operations_views_default_views() {
   $handler->display->display_options['relationships']['field_country_target_id']['table'] = 'field_data_field_country';
   $handler->display->display_options['relationships']['field_country_target_id']['field'] = 'field_country_target_id';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Taxonomy term: Geospatial data */
-  $handler->display->display_options['fields']['field_geo_data']['id'] = 'field_geo_data';
-  $handler->display->display_options['fields']['field_geo_data']['table'] = 'field_data_field_geo_data';
-  $handler->display->display_options['fields']['field_geo_data']['field'] = 'field_geo_data';
-  $handler->display->display_options['fields']['field_geo_data']['relationship'] = 'field_country_target_id';
-  $handler->display->display_options['fields']['field_geo_data']['label'] = '';
-  $handler->display->display_options['fields']['field_geo_data']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_geo_data']['type'] = 'wkt';
-  $handler->display->display_options['fields']['field_geo_data']['settings'] = array(
-    'map' => 'hr_operations',
+  /* Field: Field: Website */
+  $handler->display->display_options['fields']['field_website_1']['id'] = 'field_website_1';
+  $handler->display->display_options['fields']['field_website_1']['table'] = 'field_data_field_website';
+  $handler->display->display_options['fields']['field_website_1']['field'] = 'field_website';
+  $handler->display->display_options['fields']['field_website_1']['relationship'] = 'field_operation_region_target_id';
+  $handler->display->display_options['fields']['field_website_1']['label'] = '';
+  $handler->display->display_options['fields']['field_website_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_website_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_website_1']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_website_1']['type'] = 'link_absolute';
+  /* Field: Content: Region */
+  $handler->display->display_options['fields']['field_operation_region']['id'] = 'field_operation_region';
+  $handler->display->display_options['fields']['field_operation_region']['table'] = 'field_data_field_operation_region';
+  $handler->display->display_options['fields']['field_operation_region']['field'] = 'field_operation_region';
+  $handler->display->display_options['fields']['field_operation_region']['label'] = '';
+  $handler->display->display_options['fields']['field_operation_region']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_operation_region']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_operation_region']['alter']['text'] = '<a href="[field_website_1]">[field_operation_region]</a>';
+  $handler->display->display_options['fields']['field_operation_region']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_operation_region']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_operation_region']['settings'] = array(
+    'link' => 0,
   );
   /* Field: Content: Path */
   $handler->display->display_options['fields']['path']['id'] = 'path';
@@ -175,6 +183,7 @@ function hr_operations_views_default_views() {
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
   /* Field: Field: Website */
   $handler->display->display_options['fields']['field_website']['id'] = 'field_website';
   $handler->display->display_options['fields']['field_website']['table'] = 'field_data_field_website';
@@ -195,14 +204,28 @@ function hr_operations_views_default_views() {
   $handler->display->display_options['fields']['title_field']['alter']['absolute'] = TRUE;
   $handler->display->display_options['fields']['title_field']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title_field']['link_to_entity'] = 0;
+  /* Field: Taxonomy term: Geospatial data */
+  $handler->display->display_options['fields']['field_geo_data']['id'] = 'field_geo_data';
+  $handler->display->display_options['fields']['field_geo_data']['table'] = 'field_data_field_geo_data';
+  $handler->display->display_options['fields']['field_geo_data']['field'] = 'field_geo_data';
+  $handler->display->display_options['fields']['field_geo_data']['relationship'] = 'field_country_target_id';
+  $handler->display->display_options['fields']['field_geo_data']['label'] = '';
+  $handler->display->display_options['fields']['field_geo_data']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_geo_data']['type'] = 'wkt';
+  $handler->display->display_options['fields']['field_geo_data']['settings'] = array(
+    'map' => 'default',
+  );
   /* Field: Content: Email */
   $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
   $handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
   $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
+  $handler->display->display_options['fields']['field_email']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_email']['type'] = 'email_plain';
   /* Field: Content: Launch date */
   $handler->display->display_options['fields']['field_launch_date']['id'] = 'field_launch_date';
   $handler->display->display_options['fields']['field_launch_date']['table'] = 'field_data_field_launch_date';
   $handler->display->display_options['fields']['field_launch_date']['field'] = 'field_launch_date';
+  $handler->display->display_options['fields']['field_launch_date']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_launch_date']['settings'] = array(
     'format_type' => 'short',
     'fromto' => 'both',
@@ -242,6 +265,12 @@ function hr_operations_views_default_views() {
   $handler->display->display_options['filters']['field_operation_type_value']['value'] = array(
     'country' => 'country',
   );
+  /* Filter criterion: Content: Country (field_country) */
+  $handler->display->display_options['filters']['field_country_target_id']['id'] = 'field_country_target_id';
+  $handler->display->display_options['filters']['field_country_target_id']['table'] = 'field_data_field_country';
+  $handler->display->display_options['filters']['field_country_target_id']['field'] = 'field_country_target_id';
+  $handler->display->display_options['filters']['field_country_target_id']['operator'] = 'not empty';
+  $handler->display->display_options['path'] = 'operations/geojson';
 
   /* Display: Map */
   $handler = $view->new_display('panel_pane', 'Map', 'map');
@@ -264,7 +293,7 @@ function hr_operations_views_default_views() {
     t('[path]'),
     t('Text'),
     t('View panes'),
-    t('OpenLayers Data Overlay'),
+    t('GeoJSON'),
     t('Taxonomy term entity referenced from field_country'),
     t('Email'),
     t('Launch date'),
