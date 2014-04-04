@@ -225,14 +225,29 @@ function hr_operations_views_default_views() {
   $handler->display->display_options['fields']['field_launch_date']['id'] = 'field_launch_date';
   $handler->display->display_options['fields']['field_launch_date']['table'] = 'field_data_field_launch_date';
   $handler->display->display_options['fields']['field_launch_date']['field'] = 'field_launch_date';
-  $handler->display->display_options['fields']['field_launch_date']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_launch_date']['label'] = '';
+  $handler->display->display_options['fields']['field_launch_date']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_launch_date']['alter']['text'] = '<strong>Launched</strong>: [field_launch_date]';
+  $handler->display->display_options['fields']['field_launch_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_launch_date']['settings'] = array(
-    'format_type' => 'short',
+    'format_type' => 'hr_1',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
     'show_repeat_rule' => 'show',
+  );
+  /* Field: Content: Cluster Configuration */
+  $handler->display->display_options['fields']['field_cluster_configuration']['id'] = 'field_cluster_configuration';
+  $handler->display->display_options['fields']['field_cluster_configuration']['table'] = 'field_data_field_cluster_configuration';
+  $handler->display->display_options['fields']['field_cluster_configuration']['field'] = 'field_cluster_configuration';
+  $handler->display->display_options['fields']['field_cluster_configuration']['label'] = '';
+  $handler->display->display_options['fields']['field_cluster_configuration']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_cluster_configuration']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_cluster_configuration']['alter']['text'] = '<strong>Cluster configuration</strong>: [field_cluster_configuration]';
+  $handler->display->display_options['fields']['field_cluster_configuration']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_cluster_configuration']['settings'] = array(
+    'link' => 1,
   );
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
@@ -240,7 +255,8 @@ function hr_operations_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_email]<br />
-[field_launch_date]';
+[field_launch_date]<br />
+[field_cluster_configuration]';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -296,9 +312,11 @@ function hr_operations_views_default_views() {
     t('GeoJSON'),
     t('Taxonomy term entity referenced from field_country'),
     t('Email'),
-    t('Launch date'),
+    t('<strong>Launched</strong>: [field_launch_date]'),
+    t('<strong>Cluster configuration</strong>: [field_cluster_configuration]'),
     t('[field_email]<br />
-[field_launch_date]'),
+[field_launch_date]<br />
+[field_cluster_configuration]'),
     t('Map'),
   );
   $export['hr_operations'] = $view;
