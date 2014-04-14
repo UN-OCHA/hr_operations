@@ -54,7 +54,7 @@ function hr_operations_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'bootstrap_twocol_stacked';
+  $display->layout = 'radix_boxton';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -80,7 +80,7 @@ function hr_operations_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-4cb6a707-a104-4365-bd98-8e9c8d44c4df';
-    $pane->panel = 'top';
+    $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'hr_operations-map';
     $pane->shown = TRUE;
@@ -97,10 +97,10 @@ function hr_operations_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = '4cb6a707-a104-4365-bd98-8e9c8d44c4df';
     $display->content['new-4cb6a707-a104-4365-bd98-8e9c8d44c4df'] = $pane;
-    $display->panels['top'][0] = 'new-4cb6a707-a104-4365-bd98-8e9c8d44c4df';
+    $display->panels['contentmain'][0] = 'new-4cb6a707-a104-4365-bd98-8e9c8d44c4df';
     $pane = new stdClass();
     $pane->pid = 'new-45c370e9-66aa-49df-8656-dcad7b670d30';
-    $pane->panel = 'top';
+    $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'hr_operations-text';
     $pane->shown = TRUE;
@@ -116,7 +116,7 @@ function hr_operations_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = '45c370e9-66aa-49df-8656-dcad7b670d30';
     $display->content['new-45c370e9-66aa-49df-8656-dcad7b670d30'] = $pane;
-    $display->panels['top'][1] = 'new-45c370e9-66aa-49df-8656-dcad7b670d30';
+    $display->panels['contentmain'][1] = 'new-45c370e9-66aa-49df-8656-dcad7b670d30';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = 'new-4cb6a707-a104-4365-bd98-8e9c8d44c4df';
   $handler->conf['display'] = $display;
