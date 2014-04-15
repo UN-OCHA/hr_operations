@@ -70,7 +70,6 @@ features[variable][] = node_preview_hr_operation
 features[variable][] = node_submitted_hr_operation
 features[variable][] = og_features_settings_node_hr_operation
 features[variable][] = panelizer_defaults_node_hr_operation
-features[variable][] = panelizer_node:hr_operation_allowed_layouts
 features[variable][] = panelizer_node:hr_operation_allowed_layouts_default
 features[variable][] = panelizer_node:hr_operation_allowed_types
 features[variable][] = panelizer_node:hr_operation_allowed_types_default
