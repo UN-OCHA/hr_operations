@@ -107,6 +107,11 @@ function hr_operations_feeds_importer_default() {
             'target' => 'group_access',
             'unique' => FALSE,
           ),
+          13 => array(
+            'source' => 'Published',
+            'target' => 'status',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '2',
         'input_format' => 'plain_text',
