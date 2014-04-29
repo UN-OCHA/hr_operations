@@ -143,6 +143,7 @@ function hr_operations_strongarm() {
     'hr_offices' => '2',
     'hr_pages' => '2',
     'hr_users' => '3',
+    'hr_webforms' => '3',
   );
   $export['og_features_settings_node_hr_operation'] = $strongarm;
 
