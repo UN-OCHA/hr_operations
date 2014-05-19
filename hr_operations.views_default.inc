@@ -119,6 +119,14 @@ function hr_operations_views_default_views() {
   $handler->display->display_options['filters']['field_operation_type_value']['value'] = array(
     'country' => 'country',
   );
+  /* Filter criterion: Content: Status (field_operation_status) */
+  $handler->display->display_options['filters']['field_operation_status_value']['id'] = 'field_operation_status_value';
+  $handler->display->display_options['filters']['field_operation_status_value']['table'] = 'field_data_field_operation_status';
+  $handler->display->display_options['filters']['field_operation_status_value']['field'] = 'field_operation_status_value';
+  $handler->display->display_options['filters']['field_operation_status_value']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_operation_status_value']['value'] = array(
+    'inactive' => 'inactive',
+  );
 
   /* Display: Text */
   $handler = $view->new_display('panel_pane', 'Text', 'text');
@@ -286,6 +294,14 @@ function hr_operations_views_default_views() {
   $handler->display->display_options['filters']['field_country_target_id']['table'] = 'field_data_field_country';
   $handler->display->display_options['filters']['field_country_target_id']['field'] = 'field_country_target_id';
   $handler->display->display_options['filters']['field_country_target_id']['operator'] = 'not empty';
+  /* Filter criterion: Content: Status (field_operation_status) */
+  $handler->display->display_options['filters']['field_operation_status_value']['id'] = 'field_operation_status_value';
+  $handler->display->display_options['filters']['field_operation_status_value']['table'] = 'field_data_field_operation_status';
+  $handler->display->display_options['filters']['field_operation_status_value']['field'] = 'field_operation_status_value';
+  $handler->display->display_options['filters']['field_operation_status_value']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_operation_status_value']['value'] = array(
+    'inactive' => 'inactive',
+  );
   $handler->display->display_options['path'] = 'operations/geojson';
 
   /* Display: Map */

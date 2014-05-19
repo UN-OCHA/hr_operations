@@ -57,7 +57,7 @@ function hr_operations_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -113,7 +113,7 @@ function hr_operations_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -166,7 +166,7 @@ function hr_operations_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -212,7 +212,7 @@ function hr_operations_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -275,7 +275,7 @@ function hr_operations_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_text',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -326,7 +326,7 @@ function hr_operations_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -372,7 +372,7 @@ function hr_operations_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -421,6 +421,52 @@ function hr_operations_field_default_field_instances() {
       ),
       'type' => 'options_select',
       'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-hr_operation-field_operation_status'
+  $field_instances['node-hr_operation-field_operation_status'] = array(
+    'bundle' => 'hr_operation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 15,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_operation_status',
+    'label' => 'Status',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 1,
+      ),
+      'type' => 'options_select',
+      'weight' => 6,
     ),
   );
 
@@ -531,7 +577,7 @@ function hr_operations_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -592,7 +638,7 @@ function hr_operations_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -783,6 +829,7 @@ function hr_operations_field_default_field_instances() {
   t('Mailchimp List');
   t('Region');
   t('Social media');
+  t('Status');
   t('Title');
   t('Type');
   t('Website');
