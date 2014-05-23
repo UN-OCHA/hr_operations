@@ -139,6 +139,7 @@ function hr_operations_strongarm() {
     'hr_documents' => '2',
     'hr_events' => '2',
     'hr_fundings' => '3',
+    'hr_infographics' => '2',
     'hr_news' => '2',
     'hr_offices' => '2',
     'hr_pages' => '2',
