@@ -133,6 +133,7 @@ function hr_operations_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'og_features_settings_node_hr_operation';
   $strongarm->value = array(
+    'hr_assessments' => '2',
     'hr_contacts' => '2',
     'hr_datasets' => '2',
     'hr_disasters' => '3',
