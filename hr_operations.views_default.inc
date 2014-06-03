@@ -223,7 +223,7 @@ function hr_operations_views_default_views() {
   $handler->display->display_options['fields']['field_geofield']['settings'] = array(
     'data' => 'full',
   );
-  /* Field: Content: Email */
+  /* Field: Field: Email */
   $handler->display->display_options['fields']['field_email']['id'] = 'field_email';
   $handler->display->display_options['fields']['field_email']['table'] = 'field_data_field_email';
   $handler->display->display_options['fields']['field_email']['field'] = 'field_email';
