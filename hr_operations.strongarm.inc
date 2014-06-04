@@ -1876,7 +1876,7 @@ function hr_operations_strongarm() {
     'views_panes-hr_operations-map' => 0,
     'views_panes-hr_bundles-map' => 0,
     'views_panes-hr_bundles-text' => 0,
-    'views_panes-hr_infographics_panes-list' => 0,
+    'views_panes-hr_infographics_panes-list' => 'views_panes-hr_infographics_panes-list',
     'views_panes-hr_infographics_panes-thumbnail' => 0,
     'views_panes-hr_documents_panes-thumbnail' => 0,
     'views_panes-hr_spaces-panel_pane_1' => 0,
