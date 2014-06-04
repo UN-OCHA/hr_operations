@@ -1794,7 +1794,7 @@ function hr_operations_strongarm() {
     'fieldable_panels_pane-hr_users' => 'fieldable_panels_pane-hr_users',
     'fieldable_panels_pane-fieldable_panels_pane' => 0,
     'fieldable_panels_pane-hr_assessments' => 0,
-    'fieldable_panels_pane-hr_infographics' => 0,
+    'fieldable_panels_pane-hr_infographics' => 'fieldable_panels_pane-hr_infographics',
     'flag_link-node' => 0,
     'flag_link-taxonomy_term' => 0,
     'flag_link-bean' => 0,
