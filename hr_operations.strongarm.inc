@@ -195,6 +195,7 @@ function hr_operations_strongarm() {
     'bean_pane-fts_visualization' => 'bean_pane-fts_visualization',
     'bean_pane-existing_bean' => 'bean_pane-existing_bean',
     'node_body-node_body' => 'node_body-node_body',
+    'twitter-twitter' => 'twitter-twitter',
     'user_picture-user_picture' => 0,
     'user_profile-user_profile' => 0,
     'user_signature-user_signature' => 0,
