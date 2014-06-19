@@ -120,7 +120,7 @@ function hr_operations_field_default_field_instances() {
   // Exported field_instance: 'node-hr_operation-field_country'
   $field_instances['node-hr_operation-field_country'] = array(
     'bundle' => 'hr_operation',
-    'default_value' => NULL,
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -161,11 +161,17 @@ function hr_operations_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'shs',
       'settings' => array(
         'apply_chosen' => 1,
+        'shs' => array(
+          'create_new_levels' => FALSE,
+          'create_new_terms' => FALSE,
+          'force_deepest' => FALSE,
+          'node_count' => FALSE,
+        ),
       ),
-      'type' => 'options_select',
+      'type' => 'taxonomy_shs',
       'weight' => 8,
     ),
   );
