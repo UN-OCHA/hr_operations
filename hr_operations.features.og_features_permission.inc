@@ -54,6 +54,13 @@ function hr_operations_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:hr_operation:assign contributor role'
+  $permissions['node:hr_operation:assign contributor role'] = array(
+    'roles' => array(
+      'manager' => 'manager',
+    ),
+  );
+
   // Exported og permission: 'node:hr_operation:edit group features'
   $permissions['node:hr_operation:edit group features'] = array(
     'roles' => array(
