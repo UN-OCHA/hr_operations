@@ -91,5 +91,22 @@ function hr_operations_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:hr_operation:publish any content'
+  $permissions['node:hr_operation:publish any content'] = array(
+    'roles' => array(
+      'manager' => 'manager',
+      'editor' => 'editor',
+    ),
+  );
+
+  // Exported og permission: 'node:hr_operation:unpublish any content'
+  $permissions['node:hr_operation:unpublish any content'] = array(
+    'roles' => array(
+      'manager' => 'manager',
+      'editor' => 'editor',
+    ),
+  );
+
+
   return $permissions;
 }
