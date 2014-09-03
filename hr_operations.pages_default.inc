@@ -16,7 +16,10 @@ function hr_operations_default_page_manager_pages() {
   $page->admin_title = 'Operations';
   $page->admin_description = '';
   $page->path = 'operations';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Operations',
