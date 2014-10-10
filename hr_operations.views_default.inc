@@ -43,6 +43,14 @@ function hr_operations_views_default_views() {
   $handler->display->display_options['relationships']['field_operation_region_target_id']['id'] = 'field_operation_region_target_id';
   $handler->display->display_options['relationships']['field_operation_region_target_id']['table'] = 'field_data_field_operation_region';
   $handler->display->display_options['relationships']['field_operation_region_target_id']['field'] = 'field_operation_region_target_id';
+  /* Field: Content: Path */
+  $handler->display->display_options['fields']['path_1']['id'] = 'path_1';
+  $handler->display->display_options['fields']['path_1']['table'] = 'node';
+  $handler->display->display_options['fields']['path_1']['field'] = 'path';
+  $handler->display->display_options['fields']['path_1']['relationship'] = 'field_operation_region_target_id';
+  $handler->display->display_options['fields']['path_1']['label'] = '';
+  $handler->display->display_options['fields']['path_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path_1']['element_label_colon'] = FALSE;
   /* Field: Field: Website */
   $handler->display->display_options['fields']['field_website_1']['id'] = 'field_website_1';
   $handler->display->display_options['fields']['field_website_1']['table'] = 'field_data_field_website';
@@ -51,6 +59,7 @@ function hr_operations_views_default_views() {
   $handler->display->display_options['fields']['field_website_1']['label'] = '';
   $handler->display->display_options['fields']['field_website_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_website_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_website_1']['empty'] = '[path_1]';
   $handler->display->display_options['fields']['field_website_1']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_website_1']['type'] = 'link_absolute';
   /* Field: Content: Region */
@@ -144,10 +153,6 @@ function hr_operations_views_default_views() {
   $handler->display->display_options['style_options']['data_source']['value'] = 'wkt';
   $handler->display->display_options['style_options']['data_source']['latitude'] = 'field_website_1';
   $handler->display->display_options['style_options']['data_source']['longitude'] = 'field_website_1';
-  $handler->display->display_options['style_options']['data_source']['bbox_top'] = 'field_website_1';
-  $handler->display->display_options['style_options']['data_source']['bbox_right'] = 'field_website_1';
-  $handler->display->display_options['style_options']['data_source']['bbox_bottom'] = 'field_website_1';
-  $handler->display->display_options['style_options']['data_source']['bbox_left'] = 'field_website_1';
   $handler->display->display_options['style_options']['data_source']['name_field'] = 'title_field';
   $handler->display->display_options['style_options']['data_source']['description_field'] = 'nothing';
   $handler->display->display_options['style_options']['jsonp_prefix'] = '';
@@ -321,6 +326,7 @@ function hr_operations_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Content entity referenced from field_operation_region'),
+    t('[path_1]'),
     t('<a href="[field_website_1]">[field_operation_region]</a>'),
     t('[path]'),
     t('Text'),
