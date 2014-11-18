@@ -1005,6 +1005,7 @@ function hr_operations_strongarm() {
     'entity_field-file:field_file_image_title_text' => 0,
     'entity_field-user:field_responder_in' => 0,
     'entity_field-user:og_user_node' => 0,
+    'hr_layout_standard-hr_layout_standard' => 'hr_layout_standard-hr_layout_standard',
     'token-node:source' => 0,
     'token-node:log' => 0,
     'token-node:content-type' => 0,
