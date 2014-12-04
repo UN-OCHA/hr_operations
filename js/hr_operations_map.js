@@ -1,7 +1,7 @@
 (function($) {
   $(document).ready(function() {
     // Get Data
-    $.getJSON(window.location.protocol + '://' + window.location.host + '/api/v1.0/operations?filter[type]=country&filter[status]=active', function(data) {
+    $.getJSON(window.location.protocol + '//' + window.location.host + '/api/v1.0/operations?filter[type]=country&filter[status]=active', function(data) {
         $(data.data).each(function(i) {
             // Set country code
             if(data.data[i].country != null) {
