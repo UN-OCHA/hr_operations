@@ -8,6 +8,7 @@ dependencies[] = date
 dependencies[] = feeds
 dependencies[] = feeds_et
 dependencies[] = fts_visualization
+dependencies[] = hr_api
 dependencies[] = hr_core
 dependencies[] = hr_notifications
 dependencies[] = link_icons
