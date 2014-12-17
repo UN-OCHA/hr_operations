@@ -26,6 +26,13 @@
         //Format date
         var launchDate = new Date(countriesMap[i].launch_date*1000);
         countriesMap[i].launch_date = launchDate.getDate() + "/" + (1+launchDate.getMonth()) + "/" + launchDate.getFullYear();
+
+        //Click on country
+        countriesMap[i].events = {
+            click: function(e){
+                window.location.href = countriesMap[i].homepage;
+            }
+        };
       });
 
       // Initiate the chart
