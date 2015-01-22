@@ -153,6 +153,8 @@ function hr_operations_views_default_views() {
   $handler->display->display_options['style_options']['data_source']['value'] = 'wkt';
   $handler->display->display_options['style_options']['data_source']['latitude'] = 'field_website_1';
   $handler->display->display_options['style_options']['data_source']['longitude'] = 'field_website_1';
+  $handler->display->display_options['style_options']['data_source']['geofield'] = 'field_geofield';
+  $handler->display->display_options['style_options']['data_source']['wkt'] = 'field_geofield';
   $handler->display->display_options['style_options']['data_source']['name_field'] = 'title_field';
   $handler->display->display_options['style_options']['data_source']['description_field'] = 'nothing';
   $handler->display->display_options['style_options']['jsonp_prefix'] = '';

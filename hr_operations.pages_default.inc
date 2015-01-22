@@ -59,32 +59,39 @@ function hr_operations_default_page_manager_pages() {
   $display = new panels_display();
   $display->layout = 'radix_boxton';
   $display->layout_settings = array();
-  $display->panel_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'contentmain' => NULL,
+    ),
+  );
   $display->cache = array();
   $display->title = '';
   $display->uuid = 'cb51fde1-8469-4d99-9470-0cfe51a2e382';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-4cb6a707-a104-4365-bd98-8e9c8d44c4df';
+    $pane->pid = 'new-b068c086-ea38-43cd-bdad-b4bb3d809c16';
     $pane->panel = 'contentmain';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'hr_operations-map';
+    $pane->type = 'block';
+    $pane->subtype = 'hr_operations-operations_map';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
-      'style' => 'hr_highlighted',
     );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '4cb6a707-a104-4365-bd98-8e9c8d44c4df';
-    $display->content['new-4cb6a707-a104-4365-bd98-8e9c8d44c4df'] = $pane;
-    $display->panels['contentmain'][0] = 'new-4cb6a707-a104-4365-bd98-8e9c8d44c4df';
+    $pane->uuid = 'b068c086-ea38-43cd-bdad-b4bb3d809c16';
+    $display->content['new-b068c086-ea38-43cd-bdad-b4bb3d809c16'] = $pane;
+    $display->panels['contentmain'][0] = 'new-b068c086-ea38-43cd-bdad-b4bb3d809c16';
     $pane = new stdClass();
     $pane->pid = 'new-45c370e9-66aa-49df-8656-dcad7b670d30';
     $pane->panel = 'contentmain';
@@ -105,7 +112,7 @@ function hr_operations_default_page_manager_pages() {
     $display->content['new-45c370e9-66aa-49df-8656-dcad7b670d30'] = $pane;
     $display->panels['contentmain'][1] = 'new-45c370e9-66aa-49df-8656-dcad7b670d30';
   $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-4cb6a707-a104-4365-bd98-8e9c8d44c4df';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['hr_operations'] = $page;
