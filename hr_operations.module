@@ -22,8 +22,8 @@ function hr_operations_block_info() {
 function hr_operations_block_view($delta = '') {
   switch($delta) {
     case 'operations_map':
-      drupal_add_js('http://code.highcharts.com/maps/highmaps.js', 'external');
-      drupal_add_js('http://code.highcharts.com/mapdata/custom/world.js', 'external');
+      drupal_add_js('https://code.highcharts.com/maps/highmaps.js', 'external');
+      drupal_add_js('https://code.highcharts.com/mapdata/custom/world.js', 'external');
       drupal_add_js(drupal_get_path('module', 'hr_operations') . '/js/hr_operations_map.js', 'file');
       $block['subject'] = t('');
       $block['content'] = '<div id="operations_map"></div>';
