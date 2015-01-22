@@ -34,7 +34,7 @@
             click: function(e){
                 var url = countriesMap[i].url;
                 if (countriesMap[i].homepage != null) {
-                  url = countriesMap[i].url;
+                  url = countriesMap[i].homepage;
                 }
                 window.location.href = url;
             }
