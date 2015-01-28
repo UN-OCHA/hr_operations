@@ -1869,6 +1869,7 @@ function hr_operations_strongarm() {
     'views-og_user_groups' => 0,
     'views-og_all_user_group_content' => 0,
     'views-og_members_admin' => 0,
+    'views_panes-hr_assessments_panes-list' => 'views_panes-hr_assessments_panes-list',
     'views_panes-hr_contacts_panes-list' => 'views_panes-hr_contacts_panes-list',
     'views_panes-hr_documents_panes-list' => 'views_panes-hr_documents_panes-list',
     'views_panes-hr_events_panes-upcoming' => 'views_panes-hr_events_panes-upcoming',
