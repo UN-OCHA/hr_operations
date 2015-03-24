@@ -40,6 +40,13 @@ function hr_operations_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:hr_operation:assign contributor role'
+  $permissions['node:hr_operation:assign contributor role'] = array(
+    'roles' => array(
+      'manager' => 'manager',
+    ),
+  );
+
   // Exported og permission: 'node:hr_operation:assign editor role'
   $permissions['node:hr_operation:assign editor role'] = array(
     'roles' => array(
@@ -49,13 +56,6 @@ function hr_operations_og_features_default_permissions() {
 
   // Exported og permission: 'node:hr_operation:assign manager role'
   $permissions['node:hr_operation:assign manager role'] = array(
-    'roles' => array(
-      'manager' => 'manager',
-    ),
-  );
-
-  // Exported og permission: 'node:hr_operation:assign contributor role'
-  $permissions['node:hr_operation:assign contributor role'] = array(
     'roles' => array(
       'manager' => 'manager',
     ),
@@ -76,10 +76,28 @@ function hr_operations_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:hr_operation:publish any content'
+  $permissions['node:hr_operation:publish any content'] = array(
+    'roles' => array(
+      'bundle member' => 'bundle member',
+      'editor' => 'editor',
+      'manager' => 'manager',
+    ),
+  );
+
   // Exported og permission: 'node:hr_operation:subscribe without approval'
   $permissions['node:hr_operation:subscribe without approval'] = array(
     'roles' => array(
       'non-member' => 'non-member',
+    ),
+  );
+
+  // Exported og permission: 'node:hr_operation:unpublish any content'
+  $permissions['node:hr_operation:unpublish any content'] = array(
+    'roles' => array(
+      'bundle member' => 'bundle member',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
   );
 
@@ -90,25 +108,6 @@ function hr_operations_og_features_default_permissions() {
       'manager' => 'manager',
     ),
   );
-
-  // Exported og permission: 'node:hr_operation:publish any content'
-  $permissions['node:hr_operation:publish any content'] = array(
-    'roles' => array(
-      'manager' => 'manager',
-      'editor' => 'editor',
-      'bundle member' => 'bundle member',
-    ),
-  );
-
-  // Exported og permission: 'node:hr_operation:unpublish any content'
-  $permissions['node:hr_operation:unpublish any content'] = array(
-    'roles' => array(
-      'manager' => 'manager',
-      'editor' => 'editor',
-      'bundle member' => 'bundle member',
-    ),
-  );
-
 
   return $permissions;
 }
