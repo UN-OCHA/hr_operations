@@ -96,6 +96,7 @@ function hr_operations_og_features_default_permissions() {
     'roles' => array(
       'manager' => 'manager',
       'editor' => 'editor',
+      'bundle member' => 'bundle member',
     ),
   );
 
@@ -104,6 +105,7 @@ function hr_operations_og_features_default_permissions() {
     'roles' => array(
       'manager' => 'manager',
       'editor' => 'editor',
+      'bundle member' => 'bundle member',
     ),
   );
 
