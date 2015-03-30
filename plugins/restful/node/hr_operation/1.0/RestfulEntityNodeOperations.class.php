@@ -48,6 +48,10 @@ class RestfulEntityNodeOperations extends \RestfulEntityBaseNode {
       'property' => 'field_operation_status',
     );
 
+    $public_fields['hid_access'] = array(
+      'property' => 'field_hid_access',
+    );
+
     $public_fields['country'] = array(
       'property' => 'field_country',
       'resource' => array(

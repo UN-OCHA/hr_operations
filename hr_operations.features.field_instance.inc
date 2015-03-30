@@ -222,6 +222,54 @@ function hr_operations_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-hr_operation-field_hid_access'
+  $field_instances['node-hr_operation-field_hid_access'] = array(
+    'bundle' => 'hr_operation',
+    'default_value' => array(
+      0 => array(
+        'value' => 'open',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 18,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_hid_access',
+    'label' => 'Secure Humanitarian ID contact list ?',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 16,
+    ),
+  );
+
   // Exported field_instance: 'node-hr_operation-field_launch_date'
   $field_instances['node-hr_operation-field_launch_date'] = array(
     'bundle' => 'hr_operation',
@@ -332,7 +380,7 @@ function hr_operations_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 16,
+      'weight' => 17,
     ),
   );
 
@@ -378,7 +426,7 @@ function hr_operations_field_default_field_instances() {
         'apply_chosen' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 17,
+      'weight' => 18,
     ),
   );
 
@@ -949,6 +997,7 @@ function hr_operations_field_default_field_instances() {
   t('Mailchimp List');
   t('Managed by');
   t('Region');
+  t('Secure Humanitarian ID contact list ?');
   t('Social media');
   t('Status');
   t('Title');

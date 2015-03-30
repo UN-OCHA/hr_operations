@@ -68,13 +68,13 @@ function hr_operations_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '19',
-        ),
-        'redirect' => array(
           'weight' => '20',
         ),
+        'redirect' => array(
+          'weight' => '21',
+        ),
         'language' => array(
-          'weight' => '18',
+          'weight' => '19',
         ),
       ),
       'display' => array(),
