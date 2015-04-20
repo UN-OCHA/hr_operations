@@ -2881,7 +2881,7 @@ function hr_operations_strongarm() {
     'entity_view-rules_config' => 0,
     'fieldable_panels_pane-hr_assessments' => 'fieldable_panels_pane-hr_assessments',
     'fieldable_panels_pane-hr_users' => 0,
-    'fieldable_panels_pane-fieldable_panels_pane' => 0,
+    'fieldable_panels_pane-fieldable_panels_pane' => 'fieldable_panels_pane-fieldable_panels_pane',
     'fieldable_panels_pane-hr_contacts' => 0,
     'fieldable_panels_pane-hr_documents' => 0,
     'fieldable_panels_pane-hr_infographics' => 0,
