@@ -108,6 +108,11 @@ function hr_operations_feeds_importer_default() {
             'unique' => FALSE,
           ),
           13 => array(
+            'source' => 'Status',
+            'target' => 'field_operation_status',
+            'unique' => FALSE,
+          ),
+          14 => array(
             'source' => 'Published',
             'target' => 'status',
             'unique' => FALSE,
