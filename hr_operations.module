@@ -60,8 +60,9 @@ function hr_operations_block_view($delta = '') {
     case 'operations_status':
       $block['subject'] = t('');
       $node_data = node_load(arg(1));
-      $block['content'] = print_r($node_data, true);
-      $block['content'].= '<div class="operation-status">' . "Test" . '</div>';
+      if($node_data->field_operation_status['und'][0]['value'] != "active") {
+        $block['content'] = '<div class="operation-status">' . $node_data->field_operation_status['und'][0]['value'] . '<i class="fa fa-info-circle"></i></div>';
+      }
       break;
   }
   return $block;
