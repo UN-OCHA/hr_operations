@@ -13,6 +13,9 @@ function hr_operations_block_info() {
   $blocks['operations_map'] = array(
     'info' => t('Operations Map'),
   );
+  $blocks['operations_dropdown'] = array(
+    'info' => t('Operations Dropdown'),
+  );
   return $blocks;
 }
 
@@ -27,6 +30,29 @@ function hr_operations_block_view($delta = '') {
       drupal_add_js(drupal_get_path('module', 'hr_operations') . '/js/hr_operations_map.js', 'file');
       $block['subject'] = t('');
       $block['content'] = '<div id="operations_map"></div>';
+      break;
+    case 'operations_dropdown':
+      drupal_add_library('chosen', 'drupal.chosen');
+      drupal_add_js(drupal_get_path('module', 'hr_operations') . '/js/hr_operations_dropdown.js', 'file');
+      $block['subject'] = t('All Operations');
+      $query = new EntityFieldQuery();
+      $result = $query
+        ->entityCondition('entity_type', 'node')
+        ->entityCondition('bundle', 'hr_operation')
+        ->propertyCondition('status', 1)
+        ->fieldCondition('field_operation_status', 'value', 'active', '=')
+        ->execute();
+      $entities = entity_load('node', array_keys($result['node']));
+      $block['content'] = '<select id="operations-dropdown" data-placeholder="'.t('Choose an operation...').'"><option value="_none"></option>';
+      $labels = array();
+      foreach ($entities as $nid => $entity) {
+        $labels[$nid] = entity_label('node', $entity);
+      }
+      asort($labels);
+      foreach ($labels as $nid => $label) {
+        $block['content'] .= '<option value="'.drupal_get_path_alias('node/'.$nid).'">'.$label.'</option>';
+      }
+      $block['content'] .= '</select>';
       break;
   }
   return $block;
