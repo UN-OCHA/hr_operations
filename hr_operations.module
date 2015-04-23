@@ -60,7 +60,6 @@ function hr_operations_block_view($delta = '') {
     case 'operations_status':
       $block['subject'] = t('');
       $node_data = node_load(arg(1));
-
       $block['content'] = print_r($node_data, true);
       $block['content'].= '<div class="operation-status">' . "Test" . '</div>';
       break;
