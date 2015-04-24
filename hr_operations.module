@@ -62,7 +62,7 @@ function hr_operations_block_view($delta = '') {
       $node_data = node_load(arg(1));
       if(isset($node_data->field_operation_status['und'][0]['value'])) {
         if($node_data->field_operation_status['und'][0]['value'] != "active" && $node_data->field_operation_status['und'][0]['value'] != "") {
-          $block['content'] = '<div class="operation-status ' . $node_data->field_operation_status['und'][0]['value'] . '">' . $node_data->field_operation_status['und'][0]['value'] . '<i class="fa fa-info-circle"></i></div>';
+          $block['content'] = '<div class="operation-status ' . $node_data->field_operation_status['und'][0]['value'] . '">' . $node_data->field_operation_status['und'][0]['value'] . '<i class="fa fa-info"></i></div>';
         }
       }
       break;
