@@ -38,6 +38,7 @@ function hr_operations_block_view($delta = '') {
       drupal_add_library('chosen', 'drupal.chosen');
       drupal_add_js(drupal_get_path('module', 'hr_operations') . '/js/hr_operations_dropdown.js', 'file');
       $block['subject'] = t('All Operations');
+      $block['content'] .= '<select id="operations-dropdown" data-placeholder="Choose an operation..."><option value="_none"></option>';
       $labels = _hr_operations_get_active_operation_labels();
       foreach ($labels as $nid => $label) {
         $block['content'] .= '<option value="'.drupal_get_path_alias('node/'.$nid).'">'.$label.'</option>';
