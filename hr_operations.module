@@ -37,7 +37,7 @@ function hr_operations_block_view($delta = '') {
     case 'operations_dropdown':
       drupal_add_library('chosen', 'drupal.chosen');
       $block['subject'] = t('Latest Operations');
-      $block['content'] = '<div class="row">
+      $block['content'] = '<div>
   <div class="col-sm-4">
     <img class="img-responsive" src="/sites/all/themes/humanitarianresponse/assets/images/icons/38/Disasters/DIS_conflict.png" alt="Conflict" />
   </div>
@@ -47,7 +47,7 @@ function hr_operations_block_view($delta = '') {
   </div>
 </div>
 <br />
-<div class="row">
+<div>
   <div class="col-sm-4">
     <img class="img-responsive" src="/sites/all/themes/humanitarianresponse/assets/images/icons/38/Disasters/DIS_earthquake.png" alt="Earthquake" />
   </div>
@@ -57,7 +57,7 @@ function hr_operations_block_view($delta = '') {
   </div>
 </div>
 <br />
-<div class="row">
+<div>
   <div class="col-sm-4">
     <img class="img-responsive" src="/sites/all/themes/humanitarianresponse/assets/images/icons/38/Disasters/DIS_cyclon.png" alt="Cyclon" />
   </div>
@@ -67,7 +67,7 @@ function hr_operations_block_view($delta = '') {
   </div>
 </div>
 <br />
-<div class="row">
+<div>
   <div class="col-sm-4">
     <img class="img-responsive" src="/sites/all/themes/humanitarianresponse/assets/images/icons/38/Disasters/DIS_conflict.png" alt="Conflict" />
   </div>
