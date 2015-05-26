@@ -36,10 +36,10 @@ function hr_operations_block_view($delta = '') {
       break;
     case 'operations_dropdown':
       drupal_add_library('chosen', 'drupal.chosen');
-      $block['subject'] = t('All Operations');
+      $block['subject'] = t('Latest Operations');
       $block['content'] = '<div class="row">
   <div class="col-sm-4">
-    <img src="/sites/all/themes/humanitarianresponse/assets/images/icons/75/Disasters/DIS_cyclon.png" alt="Cyclon" />
+    <img class="img-responsive" style="width: 75%;" src="/sites/all/themes/humanitarianresponse/assets/images/icons/75/Disasters/DIS_cyclon.png" alt="Cyclon" />
   </div>
   <div class="col-sm-8">
     <strong><a href="/operations/vanuatu/vanuatu-tropical-cyclone-pam-mar-2015-13-march-2015-update">Vanuatu</a></strong>
@@ -49,14 +49,14 @@ function hr_operations_block_view($delta = '') {
 <br />
 <div class="row">
   <div class="col-sm-4">
-    <img src="/sites/all/themes/humanitarianresponse/assets/images/icons/75/Disasters/DIS_conflict.png" alt="Conflict" />
+    <img class="img-responsive" style="width: 75%;" src="/sites/all/themes/humanitarianresponse/assets/images/icons/75/Disasters/DIS_conflict.png" alt="Conflict" />
   </div>
   <div class="col-sm-8">
     <strong><a href="/operations/iraq">Iraq</a></strong>
     <p>June, 2014</p>
   </div>
 </div>';
-      $block['content'] .= '<select id="operations-dropdown" data-placeholder="Choose an operation..." class="hr-goto-dropdown"><option value="_none"></option>';
+      $block['content'] .= '<select id="operations-dropdown" data-placeholder="All Operations" class="hr-goto-dropdown"><option value="_none"></option>';
       $labels = _hr_operations_get_active_operation_labels();
       foreach ($labels as $path => $label) {
         $block['content'] .= '<option value="'.$path.'">'.$label.'</option>';
