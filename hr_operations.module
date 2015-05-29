@@ -39,7 +39,9 @@ function hr_operations_block_view($delta = '') {
       $block['subject'] = t('Operations');
       $block['content'] = '<div>
   <div class="col-sm-4">
+    <a href="/operations/yemen">
     <img class="img-responsive" src="/sites/all/themes/humanitarianresponse/assets/images/icons/38/Disasters/DIS_conflict.png" alt="Conflict" />
+    </a>
   </div>
   <div class="col-sm-8">
     <p><strong><a href="/operations/yemen">Yemen</a></strong></p>
@@ -47,7 +49,9 @@ function hr_operations_block_view($delta = '') {
 </div>
 <div>
   <div class="col-sm-4">
+    <a href="/operations/nepal">
     <img class="img-responsive" src="/sites/all/themes/humanitarianresponse/assets/images/icons/38/Disasters/DIS_earthquake.png" alt="Earthquake" />
+    </a>
   </div>
   <div class="col-sm-8">
     <p><strong><a href="/operations/nepal">Nepal</a></strong></p>
@@ -55,7 +59,9 @@ function hr_operations_block_view($delta = '') {
 </div>
 <div>
   <div class="col-sm-4">
+  <a href="/operations/vanuatu">
     <img class="img-responsive" src="/sites/all/themes/humanitarianresponse/assets/images/icons/38/Disasters/DIS_cyclon.png" alt="Cyclon" />
+  </a>
   </div>
   <div class="col-sm-8">
     <p><strong><a href="/operations/vanuatu">Vanuatu</a></strong></p>
@@ -63,7 +69,9 @@ function hr_operations_block_view($delta = '') {
 </div>
 <div>
   <div class="col-sm-4">
+  <a href="operations/iraq">
     <img class="img-responsive" src="/sites/all/themes/humanitarianresponse/assets/images/icons/38/Disasters/DIS_conflict.png" alt="Conflict" />
+  </a>
   </div>
   <div class="col-sm-8">
     <p><strong><a href="/operations/iraq">Iraq</a></strong></p>
