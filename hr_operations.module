@@ -77,6 +77,13 @@ function hr_operations_block_view($delta = '') {
     <p><strong><a href="/operations/iraq">Other operation</a></strong></p>
   </div>
 </div>
+<div>
+  <div class="col-sm-4">
+    <img class="img-responsive" src="/sites/all/themes/humanitarianresponse/assets/images/icons/38/Disasters/DIS_conflict.png" alt="Conflict" />
+  </div>
+  <div class="col-sm-8">
+    <p><strong><a href="/operations/iraq">Other operation</a></strong></p>
+  </div>
 </div>';
       $block['content'] .= '<p class="text-center"><select id="operations-dropdown" data-placeholder="All Operations" class="hr-goto-dropdown"><option value="_none"></option>';
       $labels = _hr_operations_get_active_operation_labels();
