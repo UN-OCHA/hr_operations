@@ -59,7 +59,22 @@ function hr_operations_block_view($delta = '') {
 </div>
 <div>
   <div class="col-sm-12">
-    <p><strong><a href="/operations/iraq">Other operation</a></strong></p>
+    <p><strong><a href="/operations/ukraine">Ukraine</a></strong></p>
+  </div>
+</div>
+<div>
+  <div class="col-sm-12">
+    <p><strong><a href="/operations/democratic-republic-congo">République Démocratique du Congo</a></strong></p>
+  </div>
+</div>
+<div>
+  <div class="col-sm-12">
+    <p><strong><a href="/operations/afghanistan">Afghanistan</a></strong></p>
+  </div>
+</div>
+<div>
+  <div class="col-sm-12">
+    <p><strong><a href="/operations/whole-of-syria">Whole of Syria</a></strong></p>
   </div>
 </div>';
       $block['content'] .= '<p class="text-center"><select id="operations-dropdown" data-placeholder="All Operations" class="hr-goto-dropdown"><option value="_none"></option>';
