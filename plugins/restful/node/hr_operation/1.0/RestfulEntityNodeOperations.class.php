@@ -63,6 +63,14 @@ class RestfulEntityNodeOperations extends \RestfulEntityBaseNode {
       'property' => 'field_launch_date',
     );
 
+    $public_fields['created'] = array(
+      'property' => 'created',
+    );
+
+    $public_fields['changed'] = array(
+      'property' => 'changed',
+    );
+
     $public_fields['url'] = array(
       'property' => 'url',
     );
