@@ -621,7 +621,7 @@ function hr_operations_field_default_field_instances() {
       'module' => 'entityreference',
       'settings' => array(
         'match_operator' => 'CONTAINS',
-        'size' => 60,,
+        'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
       'weight' => 13,
